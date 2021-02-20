@@ -2,11 +2,22 @@ public class Main {
 
     public static void main(String[] args) {
 
+        if (args.length < 1) {
+            System.out.println("need a number of try in argument");
+        }
+        // initialise the counter of victory, the counter for the money earn by the player, number of try and the possible seed for the Random attribute for the dealer
         int victoryCount = 0;
         int moneyEarn = 0;
-        int numberOfTry = 1000000;
-
-        Dealer dealer = new Dealer();
+        int numberOfTry = Integer.parseInt(args[0]);
+        boolean shuffle = false;
+        if (args[1].startsWith("t")) {
+            shuffle = true;
+        }
+        Long seed = null;
+        if (args.length > 2) {
+            seed = Long.parseLong(args[2]);
+        }
+        Dealer dealer = new Dealer(seed, shuffle);
 
         // Test Game One
         for (int i = 0; i < numberOfTry; i++) {

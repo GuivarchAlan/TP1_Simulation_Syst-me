@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TP1_Simulation_Système:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TP1_Simulation_Système_jar</output-path>
+    <root id="archive" name="TP1_Simulation_Système.jar">
+      <element id="module-output" name="TP" />
+    </root>
+  </artifact>
+</component>
